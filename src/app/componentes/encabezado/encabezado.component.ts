@@ -1,5 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Usuario } from 'src/app/modelos/usuario';
 import { EncabezadoService } from 'src/app/servicios/encabezado.service';
 
@@ -16,10 +17,10 @@ export class EncabezadoComponent implements OnInit {
   constructor(private encabezadoService : EncabezadoService) { }
 
   ngOnInit(): void {
-    this.obtenerUsuario();
+  /*  this.obtenerUsuario();*/
   }
 
-  public obtenerUsuario():void {
+  /*public obtenerUsuario():void {
     this.encabezadoService.obtenerUsuario().subscribe({
       next: (response: Usuario) => {
         this.usuario=response;
@@ -37,7 +38,10 @@ export class EncabezadoComponent implements OnInit {
     button.style.display='none';
     button.setAttribute('data-toggle', 'modal');
 
-    if (mode==='actualizar') {
+    if (mode==='agregar') {
+    button.setAttribute('data-target', '#agregarUsuarioModal');
+    } else if
+    (mode==='actualizar') {
       this.actualizarUsuario=usuario;
     button.setAttribute('data-target', '#actualizarUsuarioModal');}
     
@@ -47,7 +51,7 @@ export class EncabezadoComponent implements OnInit {
 
   public onUpdateUsuario(usuario: Usuario) {
     this.actualizarUsuario=usuario;
-    document.getElementById('add-header-form')?.click();
+    document.getElementById('add-user-form')?.click();
     this.encabezadoService.actualizarUsuario(usuario).subscribe ({
     next: (response:Usuario) => {
       console.log(response);
@@ -59,4 +63,19 @@ export class EncabezadoComponent implements OnInit {
   })
   }
 
+  public onAddUsuario(addForm: NgForm) {
+    document.getElementById('add-user-form')?.click();
+    this.encabezadoService.agregarUsuario(addForm.value).subscribe ({
+    next: (response:Usuario) => {
+      console.log(response);
+      this.obtenerUsuario();
+      addForm.reset();
+    },
+    error:(error:HttpErrorResponse) => {
+      alert(error.message);
+      addForm.reset();
+    }
+    })
+  }
+*/
 }

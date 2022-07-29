@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
+//import { environment } from 'src/environments/environment';
 import { Usuario } from '../modelos/usuario';
 
 @Injectable({
@@ -13,11 +13,15 @@ export class EncabezadoService {
 
   constructor(private http: HttpClient) { }
 
-  public obtenerUsuario():Observable<Usuario> {
+ /* public obtenerUsuario():Observable<Usuario> {
     return this.http.get<Usuario>(`${this.apiServerUrl}/usuario/id/1`);
-  }
+  }*/
 
   public actualizarUsuario(usuario: Usuario):Observable<Usuario> {
     return this.http.put<Usuario>(`${this.apiServerUrl}/usuario/actualizar`, usuario);
+  }
+
+  public agregarUsuario(usuario : Usuario):Observable<Usuario>{
+    return this.http.post<Usuario>(`${this.apiServerUrl}/usuario/agregar`,usuario);
   }
 }
