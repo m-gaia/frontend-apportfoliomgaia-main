@@ -51,6 +51,7 @@ import { NavbarComponent } from './componentes/navbar/navbar.component';
       "showBackground": false,
       "clockwise": false,
       "startFromZero": false,
+  //    "responsive": true,
       "lazy": true})
   ],
   providers: [],

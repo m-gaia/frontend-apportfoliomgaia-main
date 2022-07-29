@@ -1,3 +1,15 @@
+* {
+    margin:0;
+    padding:0;
+}
+
 .font1 {
 	font-family: 'Montserrat', sans-serif;
+}
+
+@media screen and (max-width: 578px) { 
+    body {
+        font-size: 10px;
+		margin: 0;
+    }
 }

@@ -1,3 +1,12 @@
-#banner {
-    height: 10rem;
+@media screen and (max-width: 576px) { 
+
+    h4 {
+        font-size: 20px;
+    }
+    
+    h5 {
+        font-size: 15px;
+    }
+
 }
+

@@ -1,0 +1,16 @@
+@media screen and (max-width: 576px) { 
+
+    h5 {
+        font-size: 15px;
+    }
+
+    #textperfil {
+        padding-top: 20px;
+    }
+
+    .card {
+        margin: 0%;
+    }
+
+}
+
