@@ -12,54 +12,51 @@
         </div>
     </div>
 </div>
-<div id="main-container" class="container">
-    <div *ngFor="let habilidad of habilidades" class="py-2 ">
-        <div class="row row-cols-2">
-            <div class="col">
-                <div class="h-100">
-                    <div>
-                        <h5>{{ habilidad.nombreHab }}</h5>
-                        <div>
-                            <circle-progress
-                            [percent]="habilidad.nivelPorc"
-                            [radius]="100"
-                            [showUnits]="false"
-                            [showImage]="true"
-                            [imageHeight]="70"
-                            [imageWidth]="70"
-                            [showSubtitle]="true"
-                            [titleFontSize]="'25px'"
-                            [outerStrokeWidth]="12"
-                            [innerStrokeWidth]="2"
-                            [title]="habilidad.nombreHab"
-                            [imageSrc]="habilidad.imgHab"
-                            [innerStrokeColor]="'#e7e8ea'"
-                            [animation]="true"
-                            [animationDuration]="600"
-                            ></circle-progress>
-                            <a 
-                            (click)="onOpenModal('actualizar', habilidad)"
-                            class="btn btn-primary tooltips mx-2"
-                            data-placement="top"
-                            data-toggle="tooltip"
-                            data-original-title="Actualizar"
-                            ><i class="fas fa-edit"></i>
-                            </a>
-                            <a 
-                            (click)="onOpenModal('eliminar', habilidad)"
-                            class="btn btn-secondary tooltips mx-2"
-                            data-placement="top"
-                            data-toggle="tooltip"
-                            data-original-title="Eliminar"
-                            ><i class="fas fa-trash-alt"></i>
-                            </a>
-                        </div>
-                    </div>
+<div id="main-container" class="container-fluid">
+    <div class="row justify-items-center">
+        <div *ngFor="let habilidad of habilidades" class="text-center py-5 col-lg-4 col-sm-6 col-xs-12 h-100">
+            <div>
+                <h5>{{ habilidad.nombreHab }}</h5>
+                <div>
+                    <circle-progress
+                    [percent]="habilidad.nivelPorc"
+                    [radius]="100"
+                    [showUnits]="false"
+                    [showImage]="true"
+                    [imageHeight]="70"
+                    [imageWidth]="70"
+                    [showSubtitle]="true"
+                    [titleFontSize]="'25px'"
+                    [outerStrokeWidth]="12"
+                    [innerStrokeWidth]="2"
+                    [title]="habilidad.nombreHab"
+                    [imageSrc]="habilidad.imgHab"
+                    [innerStrokeColor]="'#e7e8ea'"
+                    [animation]="true"
+                    [animationDuration]="600"
+                    ></circle-progress>
+                    <a 
+                    (click)="onOpenModal('actualizar', habilidad)"
+                    class="btn btn-primary tooltips m-2"
+                    data-placement="top"
+                    data-toggle="tooltip"
+                    data-original-title="Actualizar"
+                    ><i class="fas fa-edit"></i>
+                    </a>
+                    <a 
+                    (click)="onOpenModal('eliminar', habilidad)"
+                    class="btn btn-secondary tooltips m-2"
+                    data-placement="top"
+                    data-toggle="tooltip"
+                    data-original-title="Eliminar"
+                    ><i class="fas fa-trash-alt"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </div> 
+
 
 <!-- Modal Añadir Habilidad -->
 

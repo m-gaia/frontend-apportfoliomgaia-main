@@ -17,7 +17,7 @@
     <div class="container card rounded-start py-2 font1">
         <div class="row align-items-center" >
             <div class="col-12 mb-3">
-                <img class="rounded" src="{{experiencia.imgEx}}"  alt="" width="100">
+                <img class="rounded img-fluid" src="{{experiencia.imgEx}}"  alt="" width="100">
             </div>
             <div class="col">
                 <h4>{{experiencia.puestoEx}}</h4>
@@ -28,7 +28,7 @@
             <div class="col text-center">
                 <a 
                 (click)="onOpenModal('actualizar', experiencia)"
-                class="btn btn-primary tooltips mx-2"
+                class="btn btn-primary tooltips m-2"
                 data-placement="top"
                 data-toggle="tooltip"
                 data-original-title="Actualizar"
@@ -36,7 +36,7 @@
                 </a>
                 <a 
                 (click)="onOpenModal('eliminar', experiencia)"
-                class="btn btn-secondary tooltips mx-2"
+                class="btn btn-secondary tooltips m-2"
                 data-placement="top"
                 data-toggle="tooltip"
                 data-original-title="Eliminar"
