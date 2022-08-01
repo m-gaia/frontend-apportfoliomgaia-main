@@ -1,16 +1,37 @@
 @media screen and (max-width: 576px) { 
 
+    #main-container {
+        text-align: center;
+    }
+
     h5 {
         font-size: 15px;
     }
 
+    h1 {
+        margin-left: 50px;
+    }
+
+    h2 {
+        margin-left: 50px;
+    }
+
     #textperfil {
-        padding-top: 20px;
+        padding-top: 100px;
+        text-align: center;
+        font-size: 8px;
+
+    }
+
+    #texto {
+        font-size: 10px;
     }
 
     .card {
         margin: 0%;
     }
+
+    
 
 }
 

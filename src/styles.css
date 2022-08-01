@@ -8,8 +8,9 @@
 }
 
 @media screen and (max-width: 578px) { 
-    body {
+    html, body {
         font-size: 10px;
 		margin: 0;
+        background-color: #1F2024;
     }
 }

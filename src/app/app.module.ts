@@ -46,6 +46,7 @@ import { NavbarComponent } from './componentes/navbar/navbar.component';
       "innerStrokeColor": "#e7e8ea",
       "title": "UI",
       "animateTitle": false,
+      "animation": true,
       "animationDuration": 1000,
       "showUnits": false,
       "showBackground": false,
